@@ -14,26 +14,49 @@ body {
   text-align: center;
 }
 
+/*? The reason for positioning the .card as relative and the .circle-container as absolute is to make sure that the circle container is positioned relative to its closest positioned ancestor, which in this case is the .card. This allows you to use percentage values for the positioning of the .circle-container relative to the size of the .card.*/
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: hsl(217, 19%, 24%);
   border-radius: 10px;
-  padding: 60px 70px;
+  padding: 35px 75px 75px;
   max-width: 380px;
 }
 
 .advice-id {
   color: hsl(150, 100%, 66%);
+  margin-bottom: 30px;
 }
 
 .advice-text {
   font-size: 28px;
 }
 
+.divider {
+  margin-top: 45px;
+}
+
+.circle-container {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -40px; /* Half of the circles height */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .dice {
+  width: 20px;
+  height: 20px;
 }
 
 .attribution {
