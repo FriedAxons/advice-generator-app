@@ -30,10 +30,12 @@ body {
 .advice-id {
   color: hsl(150, 100%, 66%);
   margin-bottom: 30px;
+  letter-spacing: 4px;
 }
 
 .advice-text {
-  font-size: 28px;
+  font-size: 27px;
+  font-weight: 500;
 }
 
 .divider {
@@ -54,6 +56,14 @@ body {
   transform: translateX(-50%);
 }
 
+/* The bottom value in CSS represents the distance between the bottom edge of an absolutely positioned element and the bottom edge of its containing element. In this case, the .circle-container is absolutely positioned inside the .card.
+
+When using bottom: -25px;, the .circle-container is shifted upward by 25 pixels from its normal position (which would be the bottom edge of the .card). The reason for using -25px specifically is because the height of the .circle-container is 50px, so moving it up by half of its height (25px) ensures that the center of the circle aligns with the bottom edge of the .card.
+
+So, bottom: -25px; is indeed accounting for half of the height of the circle, not a quarter. It's important to consider the positioning from the bottom edge when working with negative values. If you used bottom: -50px;, it would mean the entire circle is above the bottom edge of the .card, and the bottom of the circle would align with the bottom edge of the .card, making it look like the circle is fully outside of the card. The goal here is to have the center of the circle aligned with the bottom edge of the card, not the entire circle.
+
+In summary, the value -25px is chosen because it is half of the height of the .circle-container, ensuring that the circle is centered and halfway in and out of the .card. */
+
 .dice {
   width: 20px;
   height: 20px;
@@ -62,6 +72,9 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  width: 100%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
