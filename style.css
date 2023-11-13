@@ -54,6 +54,7 @@ body {
   bottom: -25px; /* Half of the circles height */
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 /* The bottom value in CSS represents the distance between the bottom edge of an absolutely positioned element and the bottom edge of its containing element. In this case, the .circle-container is absolutely positioned inside the .card.
