@@ -59,6 +59,21 @@ body {
   cursor: pointer;
 }
 
+/*
+
+box-shadow: offset-x offset-y blur-radius spread-radius color; 
+
+offset-x and offset-y: These values determine the horizontal and vertical offset of the shadow.
+blur-radius: This value determines the amount of blur applied to the shadow.
+spread-radius: This value determines how much the shadow should spread. A positive value will cause the shadow to expand, while a negative value will cause it to contract.
+color: This value specifies the color of the shadow.
+In the context of achieving a glowing effect, you can adjust the spread-radius and blur-radius to control the spread and intensity of the glow.
+
+*/
+.circle-container:hover {
+  box-shadow: 0 0 35px hsl(150, 100%, 66%); /* Adjust the color, spread, and intensity as needed */
+}
+
 /* The bottom value in CSS represents the distance between the bottom edge of an absolutely positioned element and the bottom edge of its containing element. In this case, the .circle-container is absolutely positioned inside the .card.
 
 When using bottom: -25px;, the .circle-container is shifted upward by 25 pixels from its normal position (which would be the bottom edge of the .card). The reason for using -25px specifically is because the height of the .circle-container is 50px, so moving it up by half of its height (25px) ensures that the center of the circle aligns with the bottom edge of the .card.
@@ -87,7 +102,7 @@ In summary, the value -25px is chosen because it is half of the height of the .c
 @media (max-width: 375px) {
   .card {
     height: 260px;
-    padding: 30px 20px 60px;
+    padding: 30px 20px 55px;
   }
 
   .advice-id {
@@ -106,10 +121,12 @@ In summary, the value -25px is chosen because it is half of the height of the .c
   .circle-container {
     width: 60px; /* Adjust the width as needed */
     height: 60px; /* Adjust the height as needed */
+    bottom: -29px;
+    /* The bottom property specifies the distance between the bottom edge of the absolutely positioned element and the bottom edge of its containing element. */
   }
 
   .dice {
-    width: 24px; /* Adjust the width as needed */
-    height: 24px; /* Adjust the height as needed */
+    width: 22px; /* Adjust the width as needed */
+    height: 22px; /* Adjust the height as needed */
   }
 }
