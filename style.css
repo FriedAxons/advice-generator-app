@@ -12,7 +12,7 @@ body {
 
 .container {
   text-align: center;
-  width: 93%;
+  width: 100%;
 }
 
 /*? The reason for positioning the .card as relative and the .circle-container as absolute is to make sure that the circle container is positioned relative to its closest positioned ancestor, which in this case is the .card. This allows you to use percentage values for the positioning of the .circle-container relative to the size of the .card.*/
@@ -100,6 +100,10 @@ In summary, the value -25px is chosen because it is half of the height of the .c
 }
 
 @media (max-width: 375px) {
+  .container {
+    width: 90%;
+  }
+
   .card {
     height: 260px;
     padding: 30px 20px 55px;
